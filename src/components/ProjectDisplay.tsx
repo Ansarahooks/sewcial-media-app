@@ -1,6 +1,6 @@
 import ProjectCard from './ProjectCard.tsx';
 
-function ProjectDisplay() {
+function ProjectDisplay({ showForm }) {
   return (
     <>
       <div className='projectCardDisplay' style={{ border: 'solid' }}>
