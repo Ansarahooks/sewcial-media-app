@@ -2,11 +2,12 @@ import { useState } from 'react';
 import ProjectDisplay from './components/ProjectDisplay.tsx';
 import Dashboard from '../src/components/Dashboard.tsx';
 
-interface Props {
-  formVisible: boolean;
-}
+// interface Props {
+//   formVisible: boolean;
+// }
 
-function App({ formVisible }: Props) {
+function App() {
+  //function App({ formVisible }: Props) {
   const [showForm, setShowForm] = useState(false);
 
   const handleClick = () => {
@@ -15,12 +16,14 @@ function App({ formVisible }: Props) {
   };
 
   return (
-    <>
-      <h1>Sewcial Media</h1>
-      <button onClick={() => handleClick()}>Add New Project!</button>
+    <div className='container'>
+      <h1 className='header'>Sewcial Media</h1>
+      <button className='button' onClick={() => handleClick()}>
+        Add New Project!
+      </button>
       <ProjectDisplay formVisible={showForm} />
       <Dashboard />
-    </>
+    </div>
   );
 }
 

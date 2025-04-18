@@ -3,18 +3,27 @@ import { useState } from 'react';
 function ProjectCard() {
   const [inputValue, setInputValue] = useState('');
 
-  const handleInput = (event) => {
-    setInputValue(event.target.value);
+  const [file, setFile] = useState();
+
+  const handleInput = (e) => {
+    setInputValue(e.target.value);
+  };
+
+  const handleChange = (e) => {
+    console.log(e.target.files);
+    setFile(URL.createObjectURL(e.target.files[0]));
   };
 
   return (
     <>
-      <div>
+      <div className='form'>
         {/* <h2>Sew many projects. Sew little time...</h2> */}
         {/* {formVisible && ( */}
         <form>
           {/* Form elements go here */}
-          <input type='file' name='file'></input>
+          <input type='image' src={file} width='300' height='300'></input>
+          <br />
+          <input type='file' name='file' onChange={handleChange}></input>
           <br />
           <label>
             Pattern Name:

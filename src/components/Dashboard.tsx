@@ -1,8 +1,8 @@
 function Dashboard() {
   return (
     <>
-      <div style={{ border: 'solid' }}>
-        <h1>Dashboard</h1>
+      <div className='dashboard' style={{ border: 'solid' }}>
+        <h2>Dashboard</h2>
       </div>
     </>
   );
