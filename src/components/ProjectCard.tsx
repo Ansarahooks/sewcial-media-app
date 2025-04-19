@@ -1,7 +1,7 @@
 function ProjectCard() {
   return (
     <>
-      <div className='form'>
+      <div>
         <p>Sew many projects. Sew little time...</p>
       </div>
     </>
